@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confirm and Pay</title>
+
+<link rel="stylesheet" href="payment.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+</i>
+
+    <img class="logo"
+        src="https://upload.wikimedia.org/wikipedia/commons/6/69/Airbnb_Logo_B%C3%A9lo.svg">
+</header>
+
+<!-- MAIN -->
+<section class="container">
+
+    <!-- LEFT -->
+    <div class="left">
+
+        <h1>Confirm and pay</h1>
+
+        <div class="box">
+
+            <h3>Your trip</h3>
+
+            <p class="trip-text">
+                You're one step away from booking your perfect stay.
+            </p>
+
+            <p id="guestCount">1 guest</p>
+
+        </div>
+
+        <div class="box">
+
+            <h3></h3>
+            <h4>payment method</h4>
+            <h5> </h5>
+
+            <button id="payBtn" class="pay-btn">
+                Continue with Google Pay / UPI
+            </button>
+
+            <p class="note">
+                Secure payment powered by UPI & Google Pay
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right">
+
+        <div class="card">
+
+            <!-- MAIN IMAGE -->
+            <img id="img" class="main-img"
+                src="https://i.pinimg.com/736x/40/10/43/401043806a4d7abfc0c402002201dc0c.jpg">
+
+            <!-- 4 GRID IMAGES -->
+            <div class="grid">
+                <img src="https://i.pinimg.com/736x/e3/12/8b/e3128b928c95a8f7ecb341853c2c5b84.jpg">
+                <img src="https://i.pinimg.com/736x/08/ab/21/08ab21ab53e325d2a510489fcf246cbd.jpg">
+                <img src="https://i.pinimg.com/1200x/81/c3/d9/81c3d955020a92c9bf607ce99a3be05b.jpg">
+                <img src="https://i.pinimg.com/1200x/ac/5f/c6/ac5fc62b51a1d226c862e6fb8db3a905.jpg">
+            </div>
+
+            <!-- DETAILS -->
+            <div class="info">
+
+                <h2 id="title">Luxury Villa Goa</h2>
+
+                <p class="rating">⭐ 4.8 (Very Good)</p>
+
+                <hr>
+
+                <div class="price-row">
+                    <span>Price</span>
+                    <span id="priceDetail">₹0</span>
+                </div>
+
+                <div class="price-row">
+                    <span>Taxes</span>
+                    <span id="tax">₹0</span>
+                </div>
+
+                <hr>
+
+                <div class="total">
+                    <span>Total</span>
+                    <span id="total">₹0</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BOTTOM PAY BAR -->
+<div class="bottom-bar">
+    <button id="payBtnBottom">Continue with Google Pay</button>
+</div>
+
+<script src="mainpagepayment.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const name = localStorage.getItem("propertyName");
+
+    console.log(name); // DEBUG
+
+    if (name) {
+        document.getElementById("title").innerText = name;
+    } else {
+        document.getElementById("title").innerText = "No Property Selected";
+    }
+});
+</script>
+
+</body>
+</html>
