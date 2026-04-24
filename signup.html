@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Airbnb Signup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    body{
+      height:100vh;display:flex;justify-content:center;align-items:center;
+      background:url('https://images.unsplash.com/photo-1505691938895-1758d7feb511') no-repeat center/cover;
+    }
+    .box{
+      width:350px;padding:40px;border-radius:20px;
+      backdrop-filter:blur(15px);
+      background:rgba(255,255,255,0.15);
+      box-shadow:0 8px 32px rgba(0,0,0,0.2);
+      text-align:center;color:#fff;
+    }
+    h2{margin-bottom:20px;}
+    .input-box{position:relative;margin-bottom:20px;}
+    .input-box input{
+      width:100%;padding:12px;border:none;border-radius:10px;
+      background:rgba(255,255,255,0.2);color:#fff;outline:none;
+    }
+    .input-box label{
+      position:absolute;top:50%;left:12px;transform:translateY(-50%);
+      font-size:13px;color:#eee;transition:.3s;pointer-events:none;
+    }
+    .input-box input:focus+label,
+    .input-box input:valid+label{
+      top:-8px;font-size:10px;background:#ff385c;padding:2px 6px;border-radius:5px;
+    }
+
+    .btn{
+      width:100%;padding:12px;border:none;border-radius:10px;
+      background:#ff385c;color:#fff;font-weight:600;cursor:pointer;
+      transition:.3s;
+    }
+    .btn:hover{background:#e03150;transform:translateY(-2px);}
+    .extra{margin-top:15px;font-size:12px;}
+    .extra a{color:#fff;text-decoration:none;}
+    .login-link-btn{
+  display:inline-block;
+  margin-top:8px;
+  padding:8px 16px;
+  background:#ffffff;
+  color:#ff385c;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:600;
+  text-decoration:none;
+  transition:0.3s;
+}
+
+.login-link-btn:hover{
+  background:#ff385c;
+  color:#fff;
+  transform:scale(1.05);
+}
+.login-link-btn{
+  background:rgba(255,255,255,0.2);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.3);
+  color:#fff;
+}
+    
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+    <a href="signup.html" class="signup-btn">Sign Up</a>
+  <h2></h2>
+
+  <form>
+    <div class="input-box">
+      <input type="email" required>
+      <label>Email</label>
+    </div>
+
+    <div class="input-box">
+      <input type="password" required>
+      <label>Password</label>
+    </div>
+
+    <button type="submit" class="signup-btn btn">Sign Up</button>
+
+   <div class="extra">
+  <p>Already have account?</p>
+  <a href="index.html" class="login-link-btn">Login</a>
+</div>
+  </form>
+</div>
+<script type="module" src="signup.js"></script>
+</body>
+</html>
